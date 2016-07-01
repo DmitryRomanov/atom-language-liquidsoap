@@ -6,9 +6,8 @@
         'include': '#comments'
     },
     {
-        'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
-        'name': 'constant.numeric.liquidsoap'
-    },
+      'include': '#constants'
+    }
     {
         'match': '\\b(function)\\s+(\\w+)\\s*\\(.*\\)'
         'captures':
@@ -30,7 +29,15 @@
     },
     {
       'match': '\\b(true|false)\\b'
-      'name': 'constant.language.liquidsoap'
+      'name': 'constant.boolean.liquidsoap'
+    },
+    {
+      'match': '[=<>@^&+\\-*/$%|][|!$%&*+./:<=>?@^~-]*'
+      'name': 'keyword.operator.infix.liquidsoap'
+    }
+    {
+      'match': '\\bnot\\b|!|[!\\?~][!$%&*+./:<=>?@^~-]+'
+      'name': 'keyword.operator.prefix.liquidsoap'
     }
 ]
 'repository':
@@ -43,5 +50,47 @@
             'name': 'punctuation.definition.comment.liquidsoap'
         'end': '\\n'
         'name': 'comment.line.number-sign.liquidsoap'
+      }
+    ]
+  'constants':
+    'patterns': [
+      {
+        'captures':
+          '1':
+            'name': 'meta.empty-typing-pair.liquidsoap'
+          '2':
+            'name': 'meta.empty-typing-pair.parens.liquidsoap'
+          '3':
+            'name': 'meta.empty-typing-pair.liquidsoap'
+        'match': '(?:\\[\\s*(\\])|\\((\\))|\\(\\s*(\\)))'
+        'name': 'constant.language.pseudo-variable.liquidsoap'
+      }
+      {
+        'match': '\\b(true|false)\\b'
+        'name': 'constant.language.boolean.liquidsoap'
+      }
+      {
+        'match': '\\b-?[0-9][0-9_]*((\\.([0-9][0-9_]*([eE][+-]??[0-9][0-9_]*)?)?)|([eE][+-]??[0-9][0-9_]*))'
+        'name': 'constant.numeric.floating-point.liquidsoap'
+      }
+      {
+        'match': '\\b(-?((0(x|X)[0-9a-fA-F][0-9a-fA-F_]*)|(0(o|O)[0-7][0-7_]*)|(0(b|B)[01][01_]*)|([0-9][0-9_]*)))n'
+        'name': 'constant.numeric.integer.nativeint.liquidsoap'
+      }
+      {
+        'match': '\\b(-?((0(x|X)[0-9a-fA-F][0-9a-fA-F_]*)|(0(o|O)[0-7][0-7_]*)|(0(b|B)[01][01_]*)|([0-9][0-9_]*)))L'
+        'name': 'constant.numeric.integer.int64.liquidsoap'
+      }
+      {
+        'match': '\\b(-?((0(x|X)[0-9a-fA-F][0-9a-fA-F_]*)|(0(o|O)[0-7][0-7_]*)|(0(b|B)[01][01_]*)|([0-9][0-9_]*)))l'
+        'name': 'constant.numeric.integer.int32.liquidsoap'
+      }
+      {
+        'match': '\\b(-?((0(x|X)[0-9a-fA-F][0-9a-fA-F_]*)|(0(o|O)[0-7][0-7_]*)|(0(b|B)[01][01_]*)|([0-9][0-9_]*)))'
+        'name': 'constant.numeric.integer.liquidsoap'
+      }
+      {
+        'match': '\'(.|\\\\(x[a-fA-F0-9][a-fA-F0-9]|[0-2]\\d\\d|[bnrt\'"\\\\]))\''
+        'name': 'constant.character.liquidsoap'
       }
     ]

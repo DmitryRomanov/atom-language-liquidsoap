@@ -1,0 +1,6 @@
+'.source.liquidsoap':
+  'editor':
+    'commentStart': '# '
+    'autoIndentOnPaste': true
+    'hardTabs': true
+    'tabLength': 4

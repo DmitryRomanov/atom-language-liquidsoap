@@ -28,6 +28,10 @@
         'end': '"'
         'name': 'string.quoted.double.liquidsoap'
     },
+    {
+      'match': '\\b(true|false)\\b'
+      'name': 'constant.language.liquidsoap'
+    }
 ]
 'repository':
   'comments':

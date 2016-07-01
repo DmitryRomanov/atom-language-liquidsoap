@@ -4,7 +4,7 @@
     "name": "Dmitry Romanov",
     "email": "dmitry.romanov85@gmail.com"
   },
-  "version": "1.0",
+  "version": "0.0.0",
   "description": "Provides basic syntax highlighting for liquidsoap files",
   "keywords": [
     "liquidsoap",
@@ -15,5 +15,5 @@
   "license": "MIT",
   "engines": {
     "atom": ">=0.196.0 <2.0.0"
-  },
+  }
 }

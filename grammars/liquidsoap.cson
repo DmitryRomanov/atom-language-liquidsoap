@@ -3,7 +3,7 @@
 'fileTypes': ['liq']
 'patterns': [
     {
-    'include': '#line_comments'
+        'include': '#comments'
     },
     {
         'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
@@ -16,7 +16,7 @@
                 'name': 'keyword.control.liquidsoap'
             '2':
                 'name': 'entity.name.function.liquidsoap'
-        'name': 'meta.function.mylanguage'
+        'name': 'meta.function.liquidsoap'
     },
     {
         'begin': '\''
@@ -30,25 +30,14 @@
     },
 ]
 'repository':
-  'comment':
-    'begin': '(^[ \\t]+)?(?=#)'
-    'beginCaptures':
-      '1':
-        'name': 'punctuation.whitespace.comment.leading.makefile'
-    'end': '(?!\\G)'
+  'comments':
     'patterns': [
       {
         'begin': '#'
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.comment.makefile'
+            'name': 'punctuation.definition.comment.liquidsoap'
         'end': '\\n'
-        'name': 'comment.line.number-sign.makefile'
-        'patterns': [
-          {
-            'match': '\\\\\\n'
-            'name': 'constant.character.escape.continuation.makefile'
-          }
-        ]
+        'name': 'comment.line.number-sign.liquidsoap'
       }
     ]

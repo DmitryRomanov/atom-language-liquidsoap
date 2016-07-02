@@ -30,16 +30,104 @@
     {
       'match': '\\b(true|false)\\b'
       'name': 'constant.boolean.liquidsoap'
-    },
-    {
-      'match': '[=<>@^&+\\-*/$%|][|!$%&*+./:<=>?@^~-]*'
-      'name': 'keyword.operator.infix.liquidsoap'
     }
     {
-      'match': '\\bnot\\b|!|[!\\?~][!$%&*+./:<=>?@^~-]+'
-      'name': 'keyword.operator.prefix.liquidsoap'
+      'match': '(?i)\\b(d|f)\\b'
+      'name': 'support.function.liquidsoap'
     }
-]
+    {
+      'match': '(?i)\\b(audio_to_stereo|drop_audio|drop_midi|drop_video|id|mean|mux_audio|mux_mono|mux_stereo|mux_video|stereo.left|stereo.right|swap)\\b'
+      'name': 'support.function.source.conversion.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(blank|empty|fail|in|input.alsa|input.external|input.gstreamer.audio|input.gstreamer.audio_video|input.gstreamer.video|input.harbor|input.http|input.jack|input.keyboard.sdl|input.lastfm|input.oss|input.portaudio|input.pulseaudio|input.udp|noise|playlist.merge|playlist|playlist.once|playlist.reloadable|playlist.safe|request.dynamic|request.equeue|request.queue|saw|sine|single|square)\\b'
+      'name': 'support.function.source.input.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(buffer|buffer.adaptative)\\b'
+      'name': 'support.function.source.liquidsoap.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(midi.chord|midi.merge_all|midi.remove)\\b'
+      'name': 'support.function.source.midi_processing.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(out|output.alsa|output.ao|output.dummy|output.external|output.file|output.graphics|output.gstreamer.audio|output.gstreamer.audio_video|output.gstreamer.video|output.harbor|output.icecast|output.jack|output.oss|output.portaudio|output.prefered|output.pulseaudio|output.sdl|output.udp)\\b'
+      'name': 'support.function.source.output.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(add|amplify|bpm|clip|comb|compand|compress|compress.exponential|cross|echo|fade.final|fade.in|fade.initial|fade.out|filter|filter.fir|filter.iir.butterworth.bandpass|filter.iir.butterworth.bandstop|filter.iir.butterworth.high|filter.iir.butterworth.low|filter.iir.eq.allpass|filter.iir.eq.bandpass|filter.iir.eq.high|filter.iir.eq.highshelf|filter.iir.eq.low|filter.iir.eq.lowshelf|filter.iir.eq.notch|filter.iir.eq.peak|filter.iir.resonator.allpass|filter.iir.resonator.bandpass|filter.iir.resonator.bandstop|filter.rc|flanger|helium|ladspa.alias|ladspa.allpass_c|ladspa.allpass_l|ladspa.allpass_n|ladspa.amp|ladspa.amp_mono|ladspa.amp_stereo|ladspa.ampitchshift|ladspa.analogueosc|ladspa.artificiallatency|ladspa.autophaser|ladspa.bandpass_a_iir|ladspa.bandpass_iir|ladspa.bodeshifter|ladspa.bodeshiftercv|ladspa.butthigh_iir|ladspa.buttlow_iir|ladspa.bwxover_iir|ladspa.chebstortion|ladspa.comb|ladspa.comb_c|ladspa.comb_l|ladspa.comb_n|ladspa.combsplitter|ladspa.const|ladspa.crossoverdist|ladspa.dcremove|ladspa.decay|ladspa.decimator|ladspa.declip|ladspa.delay_5s|ladspa.delay_c|ladspa.delay_l|ladspa.delay_n|ladspa.delayorama|ladspa.diode|ladspa.divider|ladspa.dj_eq|ladspa.dj_eq_mono|ladspa.djflanger|ladspa.dysoncompress|ladspa.faddelay|ladspa.fastlookaheadlimiter|ladspa.flanger|ladspa.fmosc|ladspa.foldover|ladspa.fourbyfourpole|ladspa.foverdrive|ladspa.freqtracker|ladspa.gate|ladspa.giantflange|ladspa.gong|ladspa.gongbeater|ladspa.gsm|ladspa.gverb|ladspa.hardlimiter|ladspa.harmonicgen|ladspa.hermesfilter|ladspa.highpass_iir|ladspa.hilbert|ladspa.hpf|ladspa.imp|ladspa.impulse_fc|ladspa.inv|ladspa.karaoke|ladspa.lcrdelay|ladspa.lfophaser|ladspa.lowpass_iir|ladspa.lpf|ladspa.lsfilter|ladspa.matrixmsst|ladspa.matrixspatialiser|ladspa.matrixstms|ladspa.mbeq|ladspa.moddelay|ladspa.multivoicechorus|ladspa.noise_white|ladspa.notch_iir|ladspa.pitchscale|ladspa.pitchscalehq|ladspa.plate|ladspa.pointercastdistortion|ladspa.rateshifter|ladspa.retroflange|ladspa.revdelay|ladspa.ringmod_1i1o1l|ladspa.ringmod_2i1o|ladspa.satanmaximiser|ladspa.sc1|ladspa.sc2|ladspa.sc3|ladspa.sc4|ladspa.sc4m|ladspa.se4|ladspa.shaper|ladspa.sifter|ladspa.sincos|ladspa.sine_faaa|ladspa.sine_faac|ladspa.sine_fcaa|ladspa.sine_fcac|ladspa.singlepara|ladspa.sinuswavewrapper|ladspa.smoothdecimate|ladspa.split|ladspa.stepmuxer|ladspa.surroundencoder|ladspa.svf|ladspa.tap_autopan|ladspa.tap_chorusflanger|ladspa.tap_deesser|ladspa.tap_doubler|ladspa.tap_dynamics_m|ladspa.tap_dynamics_st|ladspa.tap_equalizer|ladspa.tap_equalizer_bw|ladspa.tap_limiter|ladspa.tap_pinknoise|ladspa.tap_pitch|ladspa.tap_reflector|ladspa.tap_reverb|ladspa.tap_rotspeak|ladspa.tap_sigmoid|ladspa.tap_stereo_echo|ladspa.tap_tremolo|ladspa.tap_tubewarmth|ladspa.tap_vibrato|ladspa.tapedelay|ladspa.transient|ladspa.triplepara|ladspa.valve|ladspa.valverect|ladspa.vynil|ladspa.waveterrain|ladspa.xfade|ladspa.xfade4|ladspa.zm1|limit|mic_filter|mix|normalize|nrj|sky|smart_cross|soundtouch|stereo.ms.decode|stereo.ms.encode|stereo.pan|stretch)\\b'
+      'name': 'support.function.source.sound_processing.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(dssi.register|synth.all.saw|synth.all.sine|synth.all.square|synth.saw|synth.sine|synth.square)\\b'
+      'name': 'support.function.source.sound_synthesys.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(append|at|crossfade|cue_cut|delay|drop_metadata|eat_blank|fallback|fallback.skip|insert_metadata|map_metadata|merge_tracks|mksafe|on_blank|on_end|on_metadata|on_track|once|prepend|random|rewrite_metadata|rotate|say_metadata|sequence|server.insert_metadata|skip_blank|smart_crossfade|smooth_add|source.dynamic|store_metadata|strip_blank|switch)\\b'
+      'name': 'support.function.source.track_processing.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(video.add_text.gstreamer|video.add_text.sdl|video.fade.final|video.fade.in|video.fade.initial|video.fade.out|video.fill|video.frei0r._3_point_color_balance|video.frei0r._3dflippo|video.frei0r.addition|video.frei0r.addition_alpha|video.frei0r.alpha0ps|video.frei0r.alpha_injection|video.frei0r.alphaatop|video.frei0r.alphagrad|video.frei0r.alphain|video.frei0r.alphaout|video.frei0r.alphaover|video.frei0r.alphaspot|video.frei0r.alphaxor|video.frei0r.b|video.frei0r.baltan|video.frei0r.blend|video.frei0r.bluescreen0r|video.frei0r.brightness|video.frei0r.burn|video.frei0r.bw0r|video.frei0r.c0rners|video.frei0r.cairoaffineblend|video.frei0r.cairoblend|video.frei0r.cairogradient|video.frei0r.cairoimagegrid|video.frei0r.cartoon|video.frei0r.color_distance|video.frei0r.color_only|video.frei0r.coloradj_rgb|video.frei0r.colorhalftone|video.frei0r.colorize|video.frei0r.colortap|video.frei0r.composition|video.frei0r.contrast0r|video.frei0r.darken|video.frei0r.defish0r|video.frei0r.delay0r|video.frei0r.delaygrab|video.frei0r.difference|video.frei0r.distort0r|video.frei0r.dither|video.frei0r.divide|video.frei0r.dodge|video.frei0r.edgeglow|video.frei0r.emboss|video.frei0r.equaliz0r|video.frei0r.facebl0r|video.frei0r.flippo|video.frei0r.g|video.frei0r.gamma|video.frei0r.glow|video.frei0r.grain_extract|video.frei0r.grain_merge|video.frei0r.hardlight|video.frei0r.hqdn3d|video.frei0r.hue|video.frei0r.hueshift0r|video.frei0r.iir_blur|video.frei0r.invert0r|video.frei0r.ising0r|video.frei0r.k_means_clustering|video.frei0r.lens_correction|video.frei0r.letterb0xed|video.frei0r.levels|video.frei0r.light_graffiti|video.frei0r.lighten|video.frei0r.lissajous0r|video.frei0r.luminance|video.frei0r.mask0mate|video.frei0r.medians|video.frei0r.multiply|video.frei0r.nervous|video.frei0r.nikon_d90_stairstepping_fix|video.frei0r.nois0r|video.frei0r.nosync0r|video.frei0r.onecol0r|video.frei0r.opencvfacedetect|video.frei0r.overlay|video.frei0r.partik0l|video.frei0r.perspective|video.frei0r.pixeliz0r|video.frei0r.plasma|video.frei0r.posterize|video.frei0r.pr0be|video.frei0r.pr0file|video.frei0r.primaries|video.frei0r.r|video.frei0r.rgb_parade|video.frei0r.rgbnoise|video.frei0r.saturat0r|video.frei0r.saturation|video.frei0r.scale0tilt|video.frei0r.scanline0r|video.frei0r.screen|video.frei0r.select0r|video.frei0r.sharpness|video.frei0r.sigmoidaltransfer|video.frei0r.sobel|video.frei0r.softglow|video.frei0r.softlight|video.frei0r.sop_sat|video.frei0r.spillsupress|video.frei0r.squareblur|video.frei0r.subtract|video.frei0r.tehroxx0r|video.frei0r.test_pat_b|video.frei0r.test_pat_c|video.frei0r.test_pat_g|video.frei0r.test_pat_i|video.frei0r.test_pat_l|video.frei0r.test_pat_r|video.frei0r.threelay0r|video.frei0r.threshold0r|video.frei0r.timeout_indicator|video.frei0r.tint0r|video.frei0r.transparency|video.frei0r.twolay0r|video.frei0r.uv_map|video.frei0r.value|video.frei0r.vectorscope|video.frei0r.vertigo|video.frei0r.vignette|video.frei0r.white_balance|video.frei0r.xfade0r|video.greyscale|video.invert|video.lomo|video.opacity|video.opacity.blur|video.rotate|video.scale|video.sepia|video.tile|video.transparent)\\b'
+      'name': 'support.function.source.video_processing.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(rms|rms.stereo|server.rms|video.volume|visu.volume|vumeter)\\b'
+      'name': 'support.function.source.visualization.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(!=|<|<=|==|>|>=|and|not|or|random.bool)\\b'
+      'name': 'support.function.bool.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(add_timeout|ignore)\\b'
+      'name': 'support.function.control.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(add_skip_command|audioscrobbler.nowplaying|audioscrobbler.submit|http.get|http.post|icy.update_metadata|interactive.bool|interactive.float|interactive.string|osc.bool|osc.float|osc.float_pair|osc.on_bool|osc.on_float|osc.on_float_pair|osc.on_string|osc.on_string_pair|osc.send_bool|osc.send_float|osc.send_float_pair|osc.send_string|osc.send_string_pair|osc.string|osc.string_pair|print|server.register)\\b'
+      'name': 'support.function.interaction.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(add_timeout|ignore)\\b'
+      'name': 'support.function.control.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(add_decoder|add_metadata_resolver|add_oblivious_decoder|add_protocol|clock|clock.assign_new|clock.unify|configure.default_font|configure.libdir|configure.logdir|configure.rundir|enable_replaygain_metadata|file.duration|file.mime|garbage_collect|get|get_clock_status|harbor.http.register|harbor.http.remove|liquidsoap.version|log|log_clocks|metadata.export|playlist.parse|replaygain_protocol|request.create|request.create.raw|request.destroy|request.filename|request.metadata|request.ready|request.resolve|server.execute|set|source.fallible|source.id|source.init|source.is_ready|source.remaining|source.seek|source.shutdown|source.skip)\\b'
+      'name': 'support.function.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(list.add|list.append|list.assoc|list.filter|list.fold|list.hd|list.iter|list.length|list.map|list.mem|list.mem_assoc|list.nth|list.randomize|list.remove|list.remove_assoc|list.rev|list.sort|list.tl)\\b'
+      'name': 'support.function.list.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(abs|bool_of_float|bool_of_int|dB_of_lin|float_of_int|int_of_float|lin_of_dB|mod|pow|random.float|random.int)\\b'
+      'name': 'support.function.math.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(fst|snd)\\b'
+      'name': 'support.function.pair.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(base64.decode|base64.encode|bool_of_string|float_of_string|int_of_string|json_of|of_json|quote|string.capitalize|string.case|string.concat|string.escape|string.extract|string.length|string.match|string.recode|string.replace|string.split|string.utf8.escape|string_of|url.decode|url.encode|url.split|url.split_args)\\b'
+      'name': 'support.function.string.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(argv|basename|dirname|environment|exe_ext|exec_at|file.contents|file.exists|file.mime_default|file.watch|get_mime|get_process_lines|get_process_output|getenv|getopt|getpid|gettimeofday|is_directory|on_shutdown|os.type|path.concat|read|reopen.stderr|reopen.stdin|reopen.stdout|restart|setenv|shutdown|source.is_up|source.on_shutdown|system|test_process)\\b'
+      'name': 'support.function.system.liquidsoap'
+    }
+    {
+      'match': '(?i)\\b(register_flow)\\b'
+      'name': 'support.function.flows.liquidsoap'
+    }
+    {
+        'begin': '(?i)\\b((?:require|include)(?:_once)?)\\b\\s*'
+        'beginCaptures':
+          '1':
+            'name': 'keyword.control.import.include.liquidsoap'
+        'end': '(?=\\s|;|$)'
+        'name': 'meta.include.liquidsoap'
+      }
+  ]
 'repository':
   'comments':
     'patterns': [
